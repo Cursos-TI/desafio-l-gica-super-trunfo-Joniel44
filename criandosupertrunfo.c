@@ -362,20 +362,20 @@ int main(){
             resultado_attr2 = 0;
           }
           break;
-
-          printf("\\n--- Resultado FINAL da Rodada ---\n\n");                
-          if (resultado_attr1 == 1 && resultado_attr2 == 1) {                    
-            printf("Parabéns! A Carta 1 (%s) venceu a rodada!\\n", cidade1);                
-        } else if (resultado_attr1 == 2 && resultado_attr2 == 2) {                    
-            printf("Infelizmente, a Carta 2 (%s) venceu a rodada!\\n", cidade2);                
-        } else {                    
-            printf("A rodada terminou em EMPATE!\\n");                
-        }                
           
           default:
            printf("Opção Inválida! Tente Novamente.\n\n");
             break;
           }
+                    printf("--- Resultado FINAL da Rodada ---\n\n");    
+
+          if (resultado_attr1 == 1 && resultado_attr2 == 1) {                    
+            printf("Parabéns! A Carta 1 (%s) venceu a rodada!\n", cidade1);                
+        } else if (resultado_attr1 == 2 && resultado_attr2 == 2) {                    
+            printf("Infelizmente, a Carta 2 (%s) venceu a rodada!\n", cidade2);                
+        } else {                    
+            printf("A rodada terminou em EMPATE!\n");                
+        } 
         
         }
         
