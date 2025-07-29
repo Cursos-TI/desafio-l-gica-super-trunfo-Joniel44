@@ -21,9 +21,7 @@ int main(){
     char cidade2[50], codigo2[10];
     float pib2, area2, densidade2, percapita2, superpoder2;
   
-    
-    int opcao;
-       
+         
       // Início do Jogo
 
       printf("##### Bem Vindo ao Jogo de Cartas Super Trunfo #####\n\n");
@@ -176,8 +174,7 @@ int main(){
         printf("4. PIB\n");
         printf("5. Pontos Turísticos\n");
         printf("6. Densidade Demográfica\n\n");
-       /* printf("Escolha:  ");
-        scanf("%d", &opcao);*/
+       
 
         printf("Comparado: \n");
         printf("Estado: %c (apenas informativo)\n", estado1);
@@ -196,7 +193,7 @@ int main(){
           break;
         
           case 2:
-          printf("População carta 1: %d  carta 2: %d\n", populacao1, populacao2);
+          printf("População carta 1: %lu  carta 2: %lu\n", populacao1, populacao2);
           if (populacao1 > populacao2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
           } else if (populacao2 > populacao1) {
@@ -280,7 +277,7 @@ int main(){
           break;
         
           case 2:
-          printf("População carta 1: %d  carta 2: %d\n", populacao1, populacao2);
+          printf("População carta 1: %lu  carta 2: %lu\n", populacao1, populacao2);
           if (populacao1 > populacao2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
           } else if (populacao2 > populacao1) {
