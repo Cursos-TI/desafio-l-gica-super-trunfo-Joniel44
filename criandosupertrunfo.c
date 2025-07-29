@@ -6,7 +6,8 @@ int main(){
 
     //Estrutura carta 1
     
-    int ptsTur1, primeiroAtributo;;
+    int ptsTur1, primeiroAtributo;
+    int resultado_attr1 = 0;
     unsigned long int populacao1;
     char estado1; 
     char cidade1[50], codigo1[10];
@@ -15,7 +16,8 @@ int main(){
   
    //Estrutura carta 2
 
-    int ptsTur2, segundoAtributo;;
+    int ptsTur2, segundoAtributo;
+    int resultado_attr2 = 0;
     unsigned long int populacao2;
     char estado2;
     char cidade2[50], codigo2[10];
@@ -196,10 +198,13 @@ int main(){
           printf("População carta 1: %lu  carta 2: %lu\n", populacao1, populacao2);
           if (populacao1 > populacao2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
+            resultado_attr1 = 1;                           // carta 1 venceu
           } else if (populacao2 > populacao1) {
             printf("Vencedor Carta 2 (%s)\n\n", cidade2);
+            resultado_attr1 = 2;                           // carta 2 venceu
           } else {
             printf("Empate!\n\n");
+            resultado_attr1 = 0;                           // Empate
           }
           break;  
           
@@ -207,10 +212,13 @@ int main(){
           printf("Área carta 1: (%.2f) carta 2: (%.2f)\n", area1, area2);
           if (area1 > area2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
+             resultado_attr1 = 1;                            // carta 1 venceu
           } else if (area2 > area1) {
             printf("Vencedor Carta 2 (%s)\n\n", cidade2);
+             resultado_attr1 = 2;                                
           } else {
             printf("Empate!\n\n");
+             resultado_attr1 = 0;                                     
           }
           break;
         
@@ -218,10 +226,13 @@ int main(){
           printf("PiB carta 1: (%.2f)  carta 2: (%.2f)\n", pib1, pib2);
           if (pib1 > pib2) {
             printf("Vencedor Carta 1: (%s)\n\n", cidade1);
+            resultado_attr1 = 1;                                    // carta 1 venceu   
           } else if (pib2 > pib1) {
             printf("Vencedor carta 2: (%s)\n\n", cidade2);
+            resultado_attr1 = 2;                                    // carta 2 venceu 
           } else {
             printf("Empate!\n\n");
+            resultado_attr1 = 0;                                   // Empate        
           }
           break;
 
@@ -229,10 +240,13 @@ int main(){
           printf("Pontos Turísticos carta 1: (%d) carta 2: (%d)\n", ptsTur1, ptsTur2);
           if (ptsTur1 > ptsTur2) {
             printf("Vencedor Carta 1: (%s)\n\n", cidade1);
+            resultado_attr1 = 1;                                     // carta 1 venceu       
           } else if (ptsTur2 > ptsTur1) {
             printf("Vencedor Carta 2: (%s)\n\n", cidade2);
+            resultado_attr1 = 2;                                      // carta 2 venceu 
           } else{
             printf("Empate!\n\n");
+            resultado_attr1 = 0;                                    // Empate
           }
           break;
 
@@ -240,10 +254,13 @@ int main(){
           printf("Densidade Demográfica Carta 1: (%.2f) carta 2: (%.2f)\n\n", densidade1, densidade2);
           if (densidade1 < densidade2) {
             printf("Vencedor Carta 1: (%s)[menor densidade vence!]\n\n", cidade1);
+            resultado_attr1 = 1;                                                    // carta 1 venceu         
           } else if (densidade2 < densidade1) {
             printf("Vencedor carta 2: (%s)[menor densidade vence!]\n\n", cidade2);
+            resultado_attr1 = 2;                                                    // carta 2 venceu    
           } else {
             printf("Empate!\n\n");
+            resultado_attr1 = 0;                                                    // Empate       
           }
           break;
         
@@ -280,10 +297,13 @@ int main(){
           printf("População carta 1: %lu  carta 2: %lu\n", populacao1, populacao2);
           if (populacao1 > populacao2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
+            resultado_attr2 = 1;                                     // carta 1 venceu
           } else if (populacao2 > populacao1) {
             printf("Vencedor Carta 2 (%s)\n\n", cidade2);
+            resultado_attr2 = 2;                                     // carta 2 venceu        
           } else {
             printf("Empate!\n\n");
+            resultado_attr2 = 0;                                     // Empate          
           }
           break;  
           
@@ -291,10 +311,13 @@ int main(){
           printf("Área carta 1: (%.2f) carta 2: (%.2f)\n", area1, area2);
           if (area1 > area2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
+             resultado_attr2 = 1;                                // carta 1 venceu
           } else if (area2 > area1) {
             printf("Vencedor Carta 2 (%s)\n\n", cidade2);
+            resultado_attr2 = 2;                                 // carta 2 venceu   
           } else {
             printf("Empate!\n\n");
+            resultado_attr2 = 0;                                 // Empate    
           }
           break;
         
@@ -302,10 +325,13 @@ int main(){
           printf("PiB carta 1: (%.2f)  carta 2: (%.2f)\n", pib1, pib2);
           if (pib1 > pib2) {
             printf("Vencedor Carta 1: (%s)\n\n", cidade1);
+            resultado_attr2 = 1;   
           } else if (pib2 > pib1) {
             printf("Vencedor carta 2: (%s)\n\n", cidade2);
+            resultado_attr2 = 2; 
           } else {
             printf("Empate!\n\n");
+            resultado_attr2 = 0;
           }
           break;
 
@@ -313,10 +339,13 @@ int main(){
           printf("Pontos Turísticos carta 1: (%d) carta 2: (%d)\n", ptsTur1, ptsTur2);
           if (ptsTur1 > ptsTur2) {
             printf("Vencedor Carta 1: (%s)\n\n", cidade1);
+            resultado_attr2 = 1;                                   // carta 1 venceu          
           } else if (ptsTur2 > ptsTur1) {
             printf("Vencedor Carta 2: (%s)\n\n", cidade2);
+            resultado_attr2 = 2;                                  // carta 2 venceu          
           } else{
             printf("Empate!\n\n");
+            resultado_attr2 = 0;                                  // Empate 
           }
           break;
 
@@ -324,24 +353,37 @@ int main(){
           printf("Densidade Demográfica Carta 1: (%.2f) carta 2: (%.2f)\n\n", densidade1, densidade2);
           if (densidade1 < densidade2) {
             printf("Vencedor Carta 1: (%s)[menor densidade vence!]\n\n", cidade1);
+            resultado_attr2 = 1;
           } else if (densidade2 < densidade1) {
             printf("Vencedor carta 2: (%s)[menor densidade vence!]\n\n", cidade2);
+            resultado_attr2 = 2;
           } else {
             printf("Empate!\n\n");
+            resultado_attr2 = 0;
           }
           break;
+
+          printf("\\n--- Resultado FINAL da Rodada ---\n\n");                
+          if (resultado_attr1 == 1 && resultado_attr2 == 1) {                    
+            printf("Parabéns! A Carta 1 (%s) venceu a rodada!\\n", cidade1);                
+        } else if (resultado_attr1 == 2 && resultado_attr2 == 2) {                    
+            printf("Infelizmente, a Carta 2 (%s) venceu a rodada!\\n", cidade2);                
+        } else {                    
+            printf("A rodada terminou em EMPATE!\\n");                
+        }                
           
           default:
            printf("Opção Inválida! Tente Novamente.\n\n");
             break;
           }
+        
         }
         
         
         
+                 return 0;
 
 
 
 
-        return 0;
 }
