@@ -18,6 +18,7 @@ int main(){
 
     int ptsTur2, segundoAtributo;
     int resultado_attr2 = 0;
+    int escolhaValidaSegundo = 0;
     unsigned long int populacao2;
     char estado2;
     char cidade2[50], codigo2[10];
@@ -63,7 +64,7 @@ int main(){
        float pib1_reais = pib1 * 1000000000.0f;
        float inverso_densidade1 = (densidade1 == 0) ? 0.0f : 1.0f / densidade1;
        percapita1 = (populacao1 == 0) ? 0.0f : (pib1 * 1000000000.0f) / populacao1;
-       superpoder1 = (float)populacao1 + area1 + pib1_reais + ptsTur1 + percapita1 + inverso_densidade1;
+       superpoder1 = (float)populacao1 + area1 + pib1_reais + ptsTur1 + percapita1 + inverso_densidade1 + densidade1;
 
        
 
@@ -119,7 +120,7 @@ int main(){
        float pib2_reais = pib2 * 1000000000.0f;
        float inverso_densidade2 = (densidade2 == 0) ? 0.0f : 1.0f / densidade2;
        percapita2 = (populacao2 == 0) ? 0.0f : (pib2 * 1000000000.0f) / populacao2;
-       superpoder2 = (float)populacao2 + area2 + pib2_reais + ptsTur2 + percapita2 + inverso_densidade2;
+       superpoder2 = (float)populacao2 + area2 + pib2_reais + ptsTur2 + percapita2 + inverso_densidade2 + densidade2;
 
 
 
@@ -183,7 +184,6 @@ int main(){
         printf("Cidade 1: %s\n", cidade1);
         printf("Estado: %c (apenas informativo)\n", estado2);
         printf("Cidade 2: %s\n\n", cidade2);
-
         printf("Escolha a comparação: ");
         scanf(" %d", &primeiroAtributo);
 
@@ -272,6 +272,8 @@ int main(){
 
            // escolha do segundo atributo
 
+           do{
+
          printf("Escolha o segundo atributo: \n");
          printf("1. Estado (apenas informativo)\n");
          printf("2. População\n");
@@ -282,10 +284,15 @@ int main(){
          printf("Escolha a comparação: ");
          scanf(" %d", &segundoAtributo);
 
-        if (primeiroAtributo == segundoAtributo){
+        if (segundoAtributo == primeiroAtributo){
           
-          printf("Você escolheu o mesmo atributo!");
+          printf("Você escolheu o mesmo atributo, escolha outro atributo diferente!");
+        } else if (segundoAtributo < 1 || segundoAtributo > 6){
+            printf("Opção inválida! Escolha um número entre 1 e 6.\\n\\n");
         } else {
+            escolhaValidaSegundo = 1;
+        } while (!escolhaValidaSegundo);
+
           switch (segundoAtributo)
           {
           case 1:
@@ -363,10 +370,6 @@ int main(){
           }
           break;
           
-          default:
-           printf("Opção Inválida! Tente Novamente.\n\n");
-            break;
-          }
                     printf("--- Resultado FINAL da Rodada ---\n\n");    
 
           if (resultado_attr1 == 1 && resultado_attr2 == 1) {                    
@@ -376,14 +379,3 @@ int main(){
         } else {                    
             printf("A rodada terminou em EMPATE!\n");                
         } 
-        
-        }
-        
-        
-        
-                 return 0;
-
-
-
-
-}
