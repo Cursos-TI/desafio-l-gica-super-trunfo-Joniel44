@@ -285,18 +285,17 @@ int main(){
          scanf(" %d", &segundoAtributo);
 
         if (segundoAtributo == primeiroAtributo){
-          
-          printf("Você escolheu o mesmo atributo, escolha outro atributo diferente!");
-        } else if (segundoAtributo < 1 || segundoAtributo > 6){
-            printf("Opção inválida! Escolha um número entre 1 e 6.\\n\\n");
+           printf("Você escolheu o mesmo atributo, escolha outro atributo diferente!");
+        } else if (segundoAtributo < 1 || segundoAtributo > 6) {
+            printf("Opção inválida! Escolha um número entre 1 e 6.\n\n");
         } else {
             escolhaValidaSegundo = 1;
-        } while (!escolhaValidaSegundo);
+        } 
+        } while (!escolhaValidaSegundo);  
 
-          switch (segundoAtributo)
-          {
+          switch (segundoAtributo) {
           case 1:
-          printf("Nome do Estado carta1: %s carta 2: %s\n", cidade1, cidade2);
+          printf("Estado carta1: %s carta 2: %s\n", cidade1, cidade2);
           printf("Atributo não comparável. Apenas Informativo.\n");
           break;
         
@@ -350,7 +349,7 @@ int main(){
           } else if (ptsTur2 > ptsTur1) {
             printf("Vencedor Carta 2: (%s)\n\n", cidade2);
             resultado_attr2 = 2;                                  // carta 2 venceu          
-          } else{
+          } else {
             printf("Empate!\n\n");
             resultado_attr2 = 0;                                  // Empate 
           }
@@ -369,8 +368,13 @@ int main(){
             resultado_attr2 = 0;
           }
           break;
+
+          default:
+          printf("Opção Inválida!\n\n");
+          break;
+        }
           
-                    printf("--- Resultado FINAL da Rodada ---\n\n");    
+            printf("--- Resultado FINAL da Rodada ---\n\n");    
 
           if (resultado_attr1 == 1 && resultado_attr2 == 1) {                    
             printf("Parabéns! A Carta 1 (%s) venceu a rodada!\n", cidade1);                
@@ -378,4 +382,8 @@ int main(){
             printf("Infelizmente, a Carta 2 (%s) venceu a rodada!\n", cidade2);                
         } else {                    
             printf("A rodada terminou em EMPATE!\n");                
-        } 
+        
+
+            return 0;
+        
+        }
