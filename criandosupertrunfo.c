@@ -11,7 +11,7 @@ int main(){
     unsigned long int populacao1;
     char estado1; 
     char cidade1[50], codigo1[10];
-    float area1, pib1, densidade1, percapita1, superpoder1;
+    double area1, pib1, densidade1, percapita1, superpoder1;
      
   
    //Estrutura carta 2
@@ -22,7 +22,7 @@ int main(){
     unsigned long int populacao2;
     char estado2;
     char cidade2[50], codigo2[10];
-    float pib2, area2, densidade2, percapita2, superpoder2;
+    double pib2, area2, densidade2, percapita2, superpoder2;
   
          
       // Início do Jogo
