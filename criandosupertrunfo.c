@@ -190,7 +190,7 @@ int main(){
 
         switch (primeiroAtributo)   {
         case 1:
-          printf("Estado carta1: %c carta 2: %c\n", cidade1, cidade2);
+          printf("Estado carta1: %c carta 2: %c\n", estado1, estado2);
           printf("Atributo não comparável. Apenas Informativo.\n");
           break;
         
@@ -295,7 +295,7 @@ int main(){
 
           switch (segundoAtributo) {
           case 1:
-          printf("Estado carta1: %c carta 2: %c\n", cidade1, cidade2);
+          printf("Estado carta1: %c carta 2: %c\n", estado1, estado2);
           printf("Atributo não comparável. Apenas Informativo.\n");
           break;
         
