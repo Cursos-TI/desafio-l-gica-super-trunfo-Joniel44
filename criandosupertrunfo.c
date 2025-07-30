@@ -109,7 +109,7 @@ int main(){
         scanf("%lf", &area2);
 
         printf("PIB (bi): ");
-        scanf("%.lf", &pib2);
+        scanf("%lf", &pib2);
 
         printf("Pontos Turísticos: ");
         scanf("%d", &ptsTur2);
