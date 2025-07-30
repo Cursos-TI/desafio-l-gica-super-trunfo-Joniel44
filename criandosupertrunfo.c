@@ -382,8 +382,8 @@ int main(){
             printf("Infelizmente, a Carta 2 (%s) venceu a rodada!\n", cidade2);                
         } else {                    
             printf("A rodada terminou em EMPATE!\n");                
-        
-
+        }
+         
             return 0;
         
         }
