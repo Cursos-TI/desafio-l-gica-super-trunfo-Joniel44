@@ -50,21 +50,21 @@ int main(){
         scanf("%lu", &populacao1);
 
         printf("Área (km²): ");
-        scanf("%f", &area1);
+        scanf("%lf", &area1);
 
         printf("PIB (bi): ");
-        scanf("%.1f", &pib1);
+        scanf("%.lf", &pib1);
 
         printf("Pontos Turísticos: ");
         scanf("%d", &ptsTur1);
 
                //Cálculos
        
-       densidade1 = (area1 == 0) ? 0.0f : (float)populacao1 / area1;
-       float pib1_reais = pib1 * 1000000000.0f;
-       float inverso_densidade1 = (densidade1 == 0) ? 0.0f : 1.0f / densidade1;
-       percapita1 = (populacao1 == 0) ? 0.0f : (pib1 * 1000000000.0f) / populacao1;
-       superpoder1 = (float)populacao1 + area1 + pib1_reais + ptsTur1 + percapita1 + inverso_densidade1 + densidade1;
+       densidade1 = (area1 == 0) ? 0.0 : (double)populacao1 / area1;
+       double pib1_reais = pib1 * 1000000000.0;
+       double inverso_densidade1 = (densidade1 == 0) ? 0.0f : 1.0 / densidade1;
+       percapita1 = (populacao1 == 0) ? 0.0 : (pib1 * 1000000000.0) / populacao1;
+       superpoder1 = (double)populacao1 + area1 + pib1_reais + ptsTur1 + percapita1 + inverso_densidade1 + densidade1;
 
        
 
@@ -75,12 +75,12 @@ int main(){
         printf("Código: %s\n", codigo1);
         printf("Cidade: %s\n", cidade1);
         printf("População: %lu hab\n", populacao1);
-        printf("Área: %.2f Km²\n", area1);
+        printf("Área: %.2lf Km²\n", area1);
         printf("PIB: %.2lf bi\n", pib1);
         printf("Pontos Turísticos: %d\n", ptsTur1);
-        printf("Densidade Populacional: %.2f hab/km²\n", densidade1);    // calculado a densidade populacional
-        printf("PIB per Capita: %.2f Reais\n", percapita1);     // calculado o PIB per capita
-        printf("Super Poder: %.2f\n\n", superpoder1);
+        printf("Densidade Populacional: %.2lf hab/km²\n", densidade1);    // calculado a densidade populacional
+        printf("PIB per Capita: %.2lf Reais\n", percapita1);     // calculado o PIB per capita
+        printf("Super Poder: %.2lf\n\n", superpoder1);
 
          
     
@@ -106,21 +106,21 @@ int main(){
         scanf("%lu", &populacao2);
 
         printf("Área (km²): ");
-        scanf("%f", &area2);
+        scanf("%lf", &area2);
 
         printf("PIB (bi): ");
-        scanf("%.1f", &pib2);
+        scanf("%.lf", &pib2);
 
         printf("Pontos Turísticos: ");
         scanf("%d", &ptsTur2);
 
                  //Cálculos
 
-       densidade2 = (area2 == 0) ? 0.0f : (float)populacao2 / area2;
-       float pib2_reais = pib2 * 1000000000.0f;
-       float inverso_densidade2 = (densidade2 == 0) ? 0.0f : 1.0f / densidade2;
-       percapita2 = (populacao2 == 0) ? 0.0f : (pib2 * 1000000000.0f) / populacao2;
-       superpoder2 = (float)populacao2 + area2 + pib2_reais + ptsTur2 + percapita2 + inverso_densidade2 + densidade2;
+       densidade2 = (area2 == 0) ? 0.0 : (double)populacao2 / area2;
+       double pib2_reais = pib2 * 1000000000.0;
+       double inverso_densidade2 = (densidade2 == 0) ? 0.0f : 1.0 / densidade2;
+       percapita2 = (populacao2 == 0) ? 0.0 : (pib2 * 1000000000.0) / populacao2;
+       superpoder2 = (double)populacao2 + area2 + pib2_reais + ptsTur2 + percapita2 + inverso_densidade2 + densidade2;
 
 
 
@@ -131,12 +131,12 @@ int main(){
         printf("Código: %s\n", codigo2);
         printf("Cidade: %s\n", cidade2);
         printf("População: %lu hab\n", populacao2);
-        printf("Área: %.2f Km²\n", area2);
+        printf("Área: %.2lf Km²\n", area2);
         printf("PIB: %.2lf bi\n", pib2);
         printf("Pontos Turísticos: %d\n", ptsTur2);
-        printf("Densidade Populacional: %.2f hab/km²\n", densidade2);    // calculado a densidade populacional
-        printf("PIB per Capita: %.2f reais\n", percapita2);     // calculado o Pib per capita
-        printf("Super Poder: %.2f\n\n", superpoder2);
+        printf("Densidade Populacional: %.2lf hab/km²\n", densidade2);    // calculado a densidade populacional
+        printf("PIB per Capita: %.2lf reais\n", percapita2);     // calculado o Pib per capita
+        printf("Super Poder: %.2lf\n\n", superpoder2);
 
        
 
@@ -156,9 +156,9 @@ int main(){
             printf("Comparação da carta - Atributo: PIB per Capita");
 
            if (percapita1 > percapita2){
-             printf("A Carta1 (%s) Venceu com R$(%.2f) reais\n", cidade1, percapita1);  
+             printf("A Carta1 (%s) Venceu com R$(%.2lf) reais\n", cidade1, percapita1);  
            } else {
-             printf("A Carta 2 (%s) Venceu com R$(%.2f) reais\n\n", cidade2, percapita2);
+             printf("A Carta 2 (%s) Venceu com R$(%.2lf) reais\n\n", cidade2, percapita2);
         }
              printf("Comparação da carta - Atributo: Densidade Populacional");
 
@@ -209,7 +209,7 @@ int main(){
           break;  
           
         case 3:
-          printf("Área carta 1: (%.2f) carta 2: (%.2f)\n", area1, area2);
+          printf("Área carta 1: (%.2lf) carta 2: (%.2lf)\n", area1, area2);
           if (area1 > area2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
              resultado_attr1 = 1;                            // carta 1 venceu
@@ -223,7 +223,7 @@ int main(){
           break;
         
         case 4:
-          printf("PiB carta 1: (%.2f)  carta 2: (%.2f)\n", pib1, pib2);
+          printf("PiB carta 1: (%.2lf)  carta 2: (%.2lf)\n", pib1, pib2);
           if (pib1 > pib2) {
             printf("Vencedor Carta 1: (%s)\n\n", cidade1);
             resultado_attr1 = 1;                                    // carta 1 venceu   
@@ -251,7 +251,7 @@ int main(){
           break;
 
         case 6:
-          printf("Densidade Demográfica Carta 1: (%.2f) carta 2: (%.2f)\n\n", densidade1, densidade2);
+          printf("Densidade Demográfica Carta 1: (%.2lf) carta 2: (%.2lf)\n\n", densidade1, densidade2);
           if (densidade1 < densidade2) {
             printf("Vencedor Carta 1: (%s)[menor densidade vence!]\n\n", cidade1);
             resultado_attr1 = 1;                                                    // carta 1 venceu         
@@ -314,7 +314,7 @@ int main(){
           break;  
           
         case 3:
-          printf("Área carta 1: (%.2f) carta 2: (%.2f)\n", area1, area2);
+          printf("Área carta 1: (%.2lf) carta 2: (%.2lf)\n", area1, area2);
           if (area1 > area2) {
             printf("Vencedor Carta 1 (%s)\n\n", cidade1);
              resultado_attr2 = 1;                                // carta 1 venceu
@@ -328,7 +328,7 @@ int main(){
           break;
         
         case 4:
-          printf("PiB carta 1: (%.2f)  carta 2: (%.2f)\n", pib1, pib2);
+          printf("PiB carta 1: (%.2lf)  carta 2: (%.2lf)\n", pib1, pib2);
           if (pib1 > pib2) {
             printf("Vencedor Carta 1: (%s)\n\n", cidade1);
             resultado_attr2 = 1;   
@@ -356,7 +356,7 @@ int main(){
           break;
 
         case 6:
-          printf("Densidade Demográfica Carta 1: (%.2f) carta 2: (%.2f)\n\n", densidade1, densidade2);
+          printf("Densidade Demográfica Carta 1: (%.2lf) carta 2: (%.2lf)\n\n", densidade1, densidade2);
           if (densidade1 < densidade2) {
             printf("Vencedor Carta 1: (%s)[menor densidade vence!]\n\n", cidade1);
             resultado_attr2 = 1;
