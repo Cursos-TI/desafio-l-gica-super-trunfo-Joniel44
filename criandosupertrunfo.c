@@ -153,7 +153,7 @@ int main(){
 
            //Resultado da carta ganhadora
         
-            printf("Comparação da carta - Atributo: PIB per Capita");
+            /*printf("Comparação da carta - Atributo: PIB per Capita");
 
            if (percapita1 > percapita2){
              printf("A Carta1 (%s) Venceu com R$(%.2lf) reais\n", cidade1, percapita1);  
@@ -166,7 +166,7 @@ int main(){
              printf("A Carta1 (%s) Venceu com (%lu) habitantes\n", cidade1, populacao1);  
            } else {
              printf("A Carta 2 (%s) Venceu com (%lu) habitantes\n\n", cidade2, populacao2);
-        }
+        }*/
 
         // Menu interativo
 
