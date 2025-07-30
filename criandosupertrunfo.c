@@ -53,7 +53,7 @@ int main(){
         scanf("%lf", &area1);
 
         printf("PIB (bi): ");
-        scanf("%.lf", &pib1);
+        scanf("%lf", &pib1);
 
         printf("Pontos Turísticos: ");
         scanf("%d", &ptsTur1);
@@ -190,7 +190,7 @@ int main(){
 
         switch (primeiroAtributo)   {
         case 1:
-          printf("Nome do Estado carta1: %s carta 2: %s\n", cidade1, cidade2);
+          printf("Estado carta1: %s carta 2: %s\n", cidade1, cidade2);
           printf("Atributo não comparável. Apenas Informativo.\n");
           break;
         
