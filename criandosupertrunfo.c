@@ -64,7 +64,7 @@ int main(){
        double pib1_reais = pib1 * 1000000000.0;
        double inverso_densidade1 = (densidade1 == 0) ? 0.0f : 1.0 / densidade1;
        percapita1 = (populacao1 == 0) ? 0.0 : (pib1 * 1000000000.0) / populacao1;
-       superpoder1 = (double)populacao1 + area1 + pib1_reais + ptsTur1 + percapita1 + inverso_densidade1 + densidade1;
+       superpoder1 = (double)populacao1 + area1 + pib1_reais + ptsTur1 + percapita1 + inverso_densidade1;
 
        
 
@@ -120,7 +120,7 @@ int main(){
        double pib2_reais = pib2 * 1000000000.0;
        double inverso_densidade2 = (densidade2 == 0) ? 0.0f : 1.0 / densidade2;
        percapita2 = (populacao2 == 0) ? 0.0 : (pib2 * 1000000000.0) / populacao2;
-       superpoder2 = (double)populacao2 + area2 + pib2_reais + ptsTur2 + percapita2 + inverso_densidade2 + densidade2;
+       superpoder2 = (double)populacao2 + area2 + pib2_reais + ptsTur2 + percapita2 + inverso_densidade2;
 
 
 
